@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top shadow bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-size: 30px; color: hotpink;">Cake Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto"  style="margin-right: 150px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home" style="font-size: 22px; color: hotpink;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" style="font-size: 22px; color: black; margin-left: 20px;">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#cakes" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 22px; color: black; margin-left: 20px;">
+                         Cakes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="Children cakes.html" style="background-color: hotpink;">Children Special Cakes</a></li>
+                          <li><a class="dropdown-item" href="Birthday cakes.html">Birthday Cakes</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery" style="font-size: 22px; color: black; margin-left: 20px;">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#review" style="font-size: 22px; color: black; margin-left: 20px;">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" style="font-size: 22px; color: black; margin-left: 20px;">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-size: 22px; color: black; margin-left: 50px;" id="loginIcon">
+                            <img src="photo/icons8-login-30.png" alt="Login">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Order.html" style="font-size: 22px; color: black;">
+                            <img src="photo/icons8-register-30.png" alt="Register">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="text-end">
+                            <button id="view-cart-btn" class="btn">
+                                <img src="photo/icons8-cart-30.png" alt="Cart">
+                                <span id="cart-count" style="color: black;">(0)</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        </div><br> 
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                        </div> <br> 
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember Me</label>
+                        </div> <br> 
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="home">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="photo/cake1.jpeg" class="d-block w-100 img-fluid" alt="Cake 1">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="photo/cake2.jpeg" class="d-block w-100 img-fluid" alt="Cake 2">
+          </div>
+          <div class="carousel-item">
+            <img src="photo/cake3.jpeg" class="d-block w-100 img-fluid" alt="Cake 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+         <br>  <br>
+
+         <div id="about"> <br>
+            <div class="container1 my-5">
+                <h1 class="text-center" style="font-size: 50px; color: hotpink;">About Cake Shop</h1> 
+                <br>
+                <div class="row mt-4">
+                    <div class="col-12 col-lg-6 order-lg-2 text-center">
+                        <img src="photo/about2.jpeg" alt="Cake Shop" class="img-fluid" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="col-12 col-lg-6 order-lg-1">
+                        <p class="mt-4 mt-lg-0" id="shortContent" style="font-size: 16px; font-size: 20px;">
+                            We at The Cake Shop specialize in Desserts & Cakes. We believe in "Quality in our Edge," from selecting the ingredients around India to the final exquisite creation that "Bring you smiles for Sure".
+                            <br><br>
+                            Our cakes & desserts receive a lot of compliments and are complemented by a wide range of exclusive desserts.
+                        </p>
+                        <p id="moreContent" style="font-size: 16px; font-size: 20px; display: none;">
+                            Our theme-based creative cakes, cake pops, cupcakes, and desserts for parties make your party unique and inevitable. We spend more time understanding customers' expectations,
+                            <br><br>
+                            So we perfectly personalize to the needs.
+                        </p>
+                        <div id="contentContainer">
+                            <input type="button" id="readMoreBtn" value="Read More" style="font-size: 20px; height: 40px; width: 150px; border: 1px solid hotpink;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+<br> <br> 
+<div id="cakes">  
+<h1 style="text-align: center;font-size: 50px;color: hotpink;" >Cakes</h1>
+<div class="container mt-5">
+<div class="row">
+  <!-- Product Cards Column -->
+  <div class="col-md-12">
+      <div class="row">
+          <!-- Product Card 1 -->
+          <div class="col-md-3 mb-4">
+              <div class="card">
+                  <img src="photo/black forest cake.jpeg" class="card-img-top add-to-cart-img" data-name="Black Forest Cake" data-price="549" alt="Black Forest Cake">
+                  <div class="card-body text-center">
+                      <h4 class="card-title">Black Forest Cake</h4>
+                      <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                      <h4 class="card-text">$549 <strike>699</strike></h4>
+                      <button class="btn add-to-cart-btn" data-name="Black Forest Cake" data-price="549"  style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                  </div>
+              </div>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="col-md-3 mb-4">
+              <div class="card">
+                  <img src="photo/red velvet cake.jpeg" class="card-img-top add-to-cart-img" data-name="Red Velvet Cake" data-price="700" alt="Red Velvet Cake">
+                  <div class="card-body text-center">
+                      <h4 class="card-title">Red Velvet Cake</h4>
+                      <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                      <h4 class="card-text">$700 <strike>800</strike></h4>
+                      <button class="btn  add-to-cart-btn" data-name="Red Velvet Cake" data-price="700" style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                  </div>
+              </div>
+          </div>
+          <!-- Product Card 3 -->
+          <div class="col-md-3 mb-4">
+              <div class="card">
+                  <img src="photo/choco ferrero cake.jpeg" class="card-img-top add-to-cart-img" data-name="Choco Ferrero Cake" data-price="995" alt="Choco Ferrero Cake">
+                  <div class="card-body text-center">
+                      <h4 class="card-title">Choco Ferrero Cake</h4>
+                      <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                      <h4 class="card-text">$995 <strike>1100</strike></h4>
+                      <button class="btn add-to-cart-btn" data-name="Choco Ferrero Cake" data-price="995" style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                  </div>
+              </div>
+          </div>
+          <!-- Product Card 4 -->
+          <div class="col-md-3 mb-4">
+              <div class="card">
+                  <img src="photo/truffle cake.jpeg" class="card-img-top add-to-cart-img" data-name="Truffle Cake" data-price="549" alt="Truffle Cake">
+                  <div class="card-body text-center">
+                      <h4 class="card-title">Truffle Cake</h4>
+                      <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                      <h4 class="card-text">$549 <strike>650</strike></h4>
+                      <button class="btn add-to-cart-btn" data-name="Truffle Cake" data-price="549" style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                  </div>
+              </div>
+          </div>
+          <!-- Product Card 5 -->
+          <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="photo/dark choclate cake.jpeg" class="card-img-top add-to-cart-img" data-name="Dark choclate Cake" data-price="649" alt="Black Forest Cake">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Dark Choclate Cake</h4>
+                    <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                    <h4 class="card-text">$649 <strike>779</strike></h4>
+                    <button class="btn add-to-cart-btn" data-name="Vanilla Cake" data-price="649"  style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card 6 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="photo/oreo cake.jpg" class="card-img-top add-to-cart-img" data-name="Oreo Cake" data-price="700" alt="Red Velvet Cake">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Oreo Cake</h4>
+                    <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                    <h4 class="card-text">$700 <strike>800</strike></h4>
+                    <button class="btn  add-to-cart-btn" data-name="Oreo Cake" data-price="700" style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card 7 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="photo/mango cakes.jpeg" class="card-img-top add-to-cart-img" data-name="Mango Cake" data-price="500" alt="Choco Ferrero Cake">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Mango Cake</h4>
+                    <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                    <h4 class="card-text">$500 <strike>700</strike></h4>
+                    <button class="btn add-to-cart-btn" data-name="Mango Cake" data-price="500" style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card 8 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="photo/pineapple cakes.jpeg" class="card-img-top add-to-cart-img" data-name="Pineapple Cake" data-price="549" alt="Truffle Cake">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Pineapple Cake</h4>
+                    <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                    <h4 class="card-text">549 <strike>640</strike></h4>
+                    <button class="btn add-to-cart-btn" data-name="Pineapple Cake" data-price="549" style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                </div>
+            </div>
+        </div> <br> 
+         <!-- Product Card 9 -->
+         <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="photo/gems cake.jpeg" class="card-img-top add-to-cart-img" data-name="Gems Cake" data-price="600" alt="Black Forest Cake">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Gems Cake</h4>
+                    <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                    <h4 class="card-text">$600 <strike>699</strike></h4>
+                    <button class="btn add-to-cart-btn" data-name="Gems Cake" data-price="600"  style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card 10 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="photo/fruits cake.jpeg" class="card-img-top add-to-cart-img" data-name="Fruits Cake" data-price="750" alt="Red Velvet Cake">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Fruits Cake</h4>
+                    <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                    <h4 class="card-text">$750 <strike>800</strike></h4>
+                    <button class="btn  add-to-cart-btn" data-name="Fruits Cake" data-price="750" style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card 11 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="photo/white forest cake.jpeg" class="card-img-top add-to-cart-img" data-name="White Forest Cake" data-price="665" alt="Choco Ferrero Cake">
+                <div class="card-body text-center">
+                    <h4 class="card-title">White Forest Cake</h4>
+                    <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                    <h4 class="card-text">$665 <strike>800</strike></h4>
+                    <button class="btn add-to-cart-btn" data-name="White Forest Cake" data-price="665" style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card 12 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="photo/butterscotch delight.jpeg" class="card-img-top add-to-cart-img" data-name="ButterScotch Cake" data-price="659" alt="Truffle Cake">
+                <div class="card-body text-center">
+                    <h4 class="card-title">ButterScotch Cake</h4>
+                    <p style="text-align: center;text-align: justify;font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate debitis et ipsum assumenda dignissimos?</p>
+                    <h4 class="card-text">569 <strike>600</strike></h4>
+                    <button class="btn add-to-cart-btn" data-name="ButterScotch Cake" data-price="659" style="background-color: hotpink;color: white;font-size: 18px;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div id="cart-items" class="row">
+                  <!-- Cart items will be appended here -->
+              </div>
+              <div class="mt-3">
+                  <h5>Total: $<span id="total-amount">0.00</span></h5>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+<!-- View Cart Button -->
+</div>
+</div>
+
+<br>
+<div id="gallery">
+<h1 style="color: hotpink;font-size: 50px;text-align: center;">Gallery</h1>
+<div class="container mt-5">
+    <div class="row">
+        <!-- Product Cards Column -->
+        <div class="col-md-12">
+            <div class="row">
+                <!-- Product Card 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="photo/coffee cake.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="Coffee Cake" data-price="549" alt="Black Forest Cake">
+                    </div>
+                </div>
+  
+                <!-- Repeat for other cards -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="photo/gallery2.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="Eggless PinappleCake" data-price="549" alt="Strawberry Cake">
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="photo/gallery1.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="Blueberry Cake" data-price="549" alt="Vanilla Cake">
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="photo/gallery3.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="Pinapple Gems Cake" data-price="549" alt="Chocolate Cake">
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="photo/eggless fruit love.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="Eggless Fruits Love Cakes" data-price="549" alt="Black Forest Cake">
+                    </div>
+                </div>
+  
+                <!-- Repeat for other cards -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="photo/butterscotch cake craving.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="ButterScotch Cake Craving" data-price="549" alt="Strawberry Cake">
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="photo/2 tier black forest cake.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="2 Layers Black Forest Cake" data-price="549" alt="Vanilla Cake">
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="photo/walnut cake.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="Walnut Cake" data-price="549" alt="Chocolate Cake">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <!-- Product Card 1 -->
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="photo/Crunchy Nutty Choco Cake.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="Crunchy Nutty Choco Cake" data-price="549" alt="Black Forest Cake">
+                            </div>
+                        </div>
+          
+                        <!-- Repeat for other cards -->
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="photo/white forest1 cake.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="White Forest Cake" data-price="549" alt="Strawberry Cake">
+                            </div>
+                        </div>
+        
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="photo/pineapple glage cake.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="Pineapple Glage Cake" data-price="549" alt="Vanilla Cake">
+                            </div>
+                        </div>
+        
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="photo/chocolate splash cake.jpeg" class="card-img-top add-to-cart-img custom-img" data-name="Choclate Splash Cake" data-price="549" alt="Chocolate Cake">
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Image Display -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" class="img-fluid" alt="Selected Product">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<br>
+<div id="review">
+    <h1 style="text-align: center;font-size: 50px;color: hotpink;">Reviews</h1>
+    <div class="container my-5">
+         
+        <div id="reviews" class="my-4"></div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add a Review</h5>
+                <form id="reviewForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rating" class="form-label">Rating</label>
+                        <select id="rating" class="form-select" required>
+                            <option value="1">1 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="5">5 Star</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">Your Comment</label>
+                        <textarea class="form-control" id="comment" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="background-color: lightpink;font-size: 20px;">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br> <br>
+<div id="contact">
+<footer>
+    <div class="container">
+      <div class="row">
+        <!-- About Us Section -->
+        <div class="col-md-4">
+          <h5 style="font-size: 23px;">About Us</h5>
+          <p style="font-size: 20px;">We are dedicated to delivering the highest quality services and products to our customers.</p>
+        </div>
+  
+        <!-- Useful Links Section -->
+        <div class="col-md-4">
+          <h5 style="font-size: 23px;">Useful Links</h5>
+          <ul class="list-unstyled" style="font-size: 20px;">
+            <li><a href="#" style="font-size: 20px;">Privacy Policy</a></li>
+            <li><a href="#" style="font-size: 20px;">Terms of Service</a></li>
+            <li><a href="#" style="font-size: 20px;">Support</a></li>
+            <li><a href="#" style="font-size: 20px;">FAQs</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Us Section -->
+        <div class="col-md-4">
+          <h5 style="font-size: 23px;">Contact Us</h5>
+          <p style="font-size: 20px;">Email: support@example.com</p>
+          <p style="font-size: 20px;">Phone: +123 456 7890</p>
+          <p style="font-size: 20px;">Address: 3/99 South Street, Muthugapatti, Namakkal</p>
+        </div>
+      </div>
+  
+      <div class="row mt-4">
+        <!-- Social Media Links Section -->
+        <div class="col-md-12 text-center">
+          <h5 style="font-size: 23px;">Follow Us</h5>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <p style="font-size: 23px;">&copy; 2024 Your Company Name. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>
+
+
+          
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="AddToCart.js"></script>
+</body>
+</html>
+
+
