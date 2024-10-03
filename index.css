@@ -1,0 +1,115 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+.shadow
+{
+    box-shadow: 0 0 10px rgb(0,0,0.1);
+    background-color:rgb(245, 241, 242);
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FF69B4; 
+    background-color:lightpink; 
+    transition: color 0.3s, background-color 0.3s; 
+}
+
+@media (max-width: 576px) {
+  #carouselExampleInterval .carousel-item img {
+    height: 330px;
+    object-position: center; 
+  }
+}
+
+/* input:hover{
+  background-color: lightpink;
+} */
+.container1
+{
+  margin: 20px;
+}
+
+/* cart */
+.card {
+  margin-bottom: 20px;
+}
+.card-img-top:hover{
+  transform: scale(1.02);
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.btn {
+  width: 100%;
+}
+.btn:hover{
+  transform: scale(1.02);
+}
+
+.custom-img {
+  height: 300px;
+  width: 800px;
+}
+.custom-img {
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-content {
+  width: 350px; /* Adjust based on your needs */
+  height: 450px;/* Adjust based on your needs */
+}
+
+.modal-body label, .modal-body input {
+  line-height: 20px;
+}
+footer {
+  background-color: gray; /* Dark background */
+  color: #fff; /* White text */
+  padding: 40px 0;
+}
+
+footer h5 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 25px; /* Unified font size */
+}
+
+footer p {
+  font-size: 16px; /* Consistent paragraph text size */
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px; /* Consistent link size */
+}
+
+footer a:hover {
+  color:lightgreen; /* Yellow hover effect */
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color:hotpink;
+}
+
+.footer-bottom {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 18px; /* Adjusted font size */
+  margin: 0;
+}
